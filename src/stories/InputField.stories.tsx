@@ -7,6 +7,7 @@ type InputStoryProps = ComponentProps<typeof InputField>;
 
 const meta: Meta<InputStoryProps> = {
     component: InputField,
+    tags:['autodocs'],
     argTypes: {
         variant: {
             options: ['default', 'outlined', 'filled'],
@@ -34,7 +35,7 @@ const meta: Meta<InputStoryProps> = {
         },
     },
     args: {
-        onChange: fn()
+        // onChange: fn()
     }
 };
 
@@ -44,6 +45,42 @@ export default meta;
 type Story = StoryObj<InputStoryProps>;
 export const Primary: Story = {
     args: {
+        variant: 'default',
+        size: 'md',
+        id: 'input-id',
+        name: 'input-name',
+        placeholder: 'Email',
+    },
+    render: (args) => {
+        // const [{ value }, updateArgs] = useArgs();
+
+        return (
+            <InputField
+                {...args}
+            />
+        );
+    },
+}
+export const Outlined: Story = {
+    args: {
+        variant: 'outlined',
+        size: 'md',
+        id: 'input-id',
+        name: 'input-name',
+        placeholder: 'Email',
+    },
+    render: (args) => {
+        // const [{ value }, updateArgs] = useArgs();
+
+        return (
+            <InputField
+                {...args}
+            />
+        );
+    },
+}
+export const Filled: Story = {
+    args: {
         variant: 'filled',
         size: 'md',
         id: 'input-id',
@@ -51,13 +88,10 @@ export const Primary: Story = {
         placeholder: 'Email',
     },
     render: (args) => {
-        const [{ value }, updateArgs] = useArgs();
-
+        // const [{ value }, updateArgs] = useArgs();
         return (
             <InputField
                 {...args}
-                value={value}
-                onChange={(val) => updateArgs({ value: val })}
             />
         );
     },

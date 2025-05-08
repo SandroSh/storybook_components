@@ -1,14 +1,15 @@
-import { Button } from "@/components/Button";
+'use client'
+import { InputField } from "@/components/InputField";
 
-
-
+import "./globals.css";
+import Temp from "@/components/Temp";
 
 
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-    
+    <div>
+      <Temp/>
     </div>
   );
 }

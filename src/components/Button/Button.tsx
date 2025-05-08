@@ -37,10 +37,10 @@ const Button = ({children, onClick, variant = 'primary', size='md',}:ButtonProps
             cursor:'pointer',
             borderRadius:10,
             ...variantStyles[variant],
-            ...sizeStyles[size]
+            ...sizeStyles[size],
+            color:'white'
         }}
         onClick={onClick}
-        className='text-red-950'
     >
         {children}
     </button>

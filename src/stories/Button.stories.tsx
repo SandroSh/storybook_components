@@ -9,6 +9,7 @@ type StoryProps = ComponentProps<typeof Button> & {
 const meta: Meta<StoryProps> = {
   component: Button,
   // argTypes is for selection of variant,size types in this case
+  tags:['autodocs'],
   argTypes: {
     variant: {
       options: ['primary', 'secondary', 'transparent'],

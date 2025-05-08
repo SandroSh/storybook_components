@@ -5,7 +5,7 @@ import { InputFieldProps } from './inputField.config'
 
 
 
-const InputField = ({ value, onChange, placeholder, type, disabled, size = 'md', variant = 'default', id, name }: InputFieldProps) => {
+const InputField = ({placeholder, type, disabled, size = 'md', variant = 'default', id, name, className }: InputFieldProps) => {
 
 
   return (
@@ -13,11 +13,9 @@ const InputField = ({ value, onChange, placeholder, type, disabled, size = 'md',
       id={id}
       name={name}
       type={type}
-      value={value}
-      onChange={(event) => onChange(event.target.value)}
       disabled={disabled}
       placeholder={placeholder}
-      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} `}
+      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
     />
   )
 }
