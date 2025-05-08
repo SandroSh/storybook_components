@@ -1,46 +1,13 @@
-import React, { CSSProperties } from 'react'
+import React from 'react'
 import { ButtonProps } from './button.config'
+import { buttonBaseStyles, buttonSizeStyles, buttonVariantStyles } from './button.style'
 
-const Button = ({children, onClick, variant = 'primary', size='md',}:ButtonProps) => {
-    const variantStyles: Record<ButtonProps['variant'], CSSProperties> = {
-        primary:{
-            backgroundColor:'blue',
-        },
-        secondary:{
-            backgroundColor:'gray',
-        },
-        transparent:{
-            backgroundColor:'transparent',
-        },
-        
-    }
-    const sizeStyles: Record<ButtonProps['size'], CSSProperties> = {
-        sm:{
-            padding:'0.5rem',
-        },
-        md:{
-            padding:'0.75rem',
-        },
-        lg:{
-            padding:'1.5rem',
-        },
-        xl:{
-            padding:'2rem',
-        },
-        
-    }
+const Button = ({children, onClick, variant = 'default', size='md', className}:ButtonProps) => {
+   
   return (
     <button
-        style={{
-            outline:'none',
-            border:'none',
-            cursor:'pointer',
-            borderRadius:10,
-            ...variantStyles[variant],
-            ...sizeStyles[size],
-            color:'white'
-        }}
         onClick={onClick}
+        className={`${buttonBaseStyles} ${buttonVariantStyles[variant]} ${buttonSizeStyles[size]} ${className}`}
     >
         {children}
     </button>

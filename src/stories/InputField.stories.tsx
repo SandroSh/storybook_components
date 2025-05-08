@@ -7,10 +7,10 @@ type InputStoryProps = ComponentProps<typeof InputField>;
 
 const meta: Meta<InputStoryProps> = {
     component: InputField,
-    tags:['autodocs'],
+    tags: ['autodocs'],
     argTypes: {
         variant: {
-            options: ['default', 'outlined', 'filled'],
+            options: ['default', 'outlined', 'filled', 'underline', 'ghost', 'flushed', 'unstyled'],
             control: {
                 type: 'select'
             }
@@ -82,6 +82,74 @@ export const Outlined: Story = {
 export const Filled: Story = {
     args: {
         variant: 'filled',
+        size: 'md',
+        id: 'input-id',
+        name: 'input-name',
+        placeholder: 'Email',
+    },
+    render: (args) => {
+        // const [{ value }, updateArgs] = useArgs();
+        return (
+            <InputField
+                {...args}
+            />
+        );
+    },
+}
+export const Underline: Story = {
+    args: {
+        variant: 'underline',
+        size: 'md',
+        id: 'input-id',
+        name: 'input-name',
+        placeholder: 'Email',
+    },
+    render: (args) => {
+        // const [{ value }, updateArgs] = useArgs();
+        return (
+            <InputField
+                {...args}
+            />
+        );
+    },
+}
+export const Ghost: Story = {
+    args: {
+        variant: 'ghost',
+        size: 'md',
+        id: 'input-id',
+        name: 'input-name',
+        placeholder: 'Email',
+    },
+    render: (args) => {
+        // const [{ value }, updateArgs] = useArgs();
+        return (
+            <InputField
+                {...args}
+            />
+        );
+    },
+}
+export const Flushed: Story = {
+    args: {
+        variant: 'flushed',
+        size: 'md',
+        id: 'input-id',
+        name: 'input-name',
+        placeholder: 'Email',
+    },
+    render: (args) => {
+        // const [{ value }, updateArgs] = useArgs();
+        return (
+            <InputField
+                {...args}
+            />
+        );
+    },
+}
+export const Unstyled: Story = {
+    args: {
+        variant: 'unstyled',
         size: 'md',
         id: 'input-id',
         name: 'input-name',

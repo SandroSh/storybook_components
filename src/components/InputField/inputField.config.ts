@@ -8,6 +8,6 @@ export type InputFieldProps = PropsWithChildren<{
     type?: 'text' | 'password' | 'email' | 'number';
     disabled?: boolean;
     size?: 'sm' | 'md' | 'lg' | 'xl';
-    variant?: 'default' | 'outlined' | 'filled';
+    variant?: 'default' | 'outlined' | 'filled' | 'underline' | 'ghost' | 'flushed' | 'unstyled';
     className?:string;
 }>;
