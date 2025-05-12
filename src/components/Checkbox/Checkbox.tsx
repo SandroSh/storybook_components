@@ -1,26 +1,28 @@
 import React from 'react';
 import { CheckboxProps } from './checkbox.config';
-import { checkboxBaseStyles, checkboxSizeStyles } from './checkbox.style';
+import { checkboxBaseStyles, checkboxSizeStyles, checkboxVariantStyles } from './checkbox.style';
 
 const Checkbox = ({
   checked = false,
   onChange,
-  label,
   size = 'md',
+  variant = 'basic',
   className = '',
   id,
 }: CheckboxProps) => {
   return (
-    <label className={`inline-flex items-center gap-2 cursor-pointer ${className}`}>
-      <input
-        id={id}
-        type="checkbox"
-        checked={checked}
-        onChange={onChange}
-        className={`${checkboxBaseStyles} ${checkboxSizeStyles[size]}`}
-      />
-      {label && <span className="select-none">{label}</span>}
-    </label>
+    <input
+      id={id}
+      type="checkbox"
+      checked={checked}
+      onChange={onChange}
+      className={`
+        ${checkboxBaseStyles} 
+        ${checkboxSizeStyles[size]} 
+        ${checkboxVariantStyles[variant]} 
+        ${className}
+      `}
+    />
   );
 };
 
