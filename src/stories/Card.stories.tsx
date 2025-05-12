@@ -40,3 +40,39 @@ export const Basic:Story = {
         ),
       },
 };
+export const Outlined:Story = {
+    args: {
+        variant: 'outlined',
+        size: 'md',
+        children: (
+          <>
+            <h2 className="text-lg font-bold mb-2">Basic Card</h2>
+            <p>This is a basic card with some example content.</p>
+          </>
+        ),
+      },
+};
+export const Elevated:Story = {
+    args: {
+        variant: 'elevated',
+        size: 'md',
+        children: (
+            <>
+            <h2 className="text-lg font-bold mb-2">Basic Card</h2>
+            <p>This is a basic card with some example content.</p>
+          </>
+        ),
+    },
+};
+export const Clickable:Story = {
+    args: {
+        variant: 'clickable',
+        size: 'sm',
+        children: (
+          <>
+            <h2 className="text-lg font-bold mb-2">Basic Card</h2>
+            <p>This is a basic card with some example content.</p>
+          </>
+        ),
+      },
+};

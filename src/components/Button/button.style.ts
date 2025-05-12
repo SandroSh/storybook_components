@@ -1,11 +1,11 @@
 import { ButtonProps } from "./button.config";
 
 export const buttonBaseStyles =
-  "rounded-lg transition-all duration-200 focus:ring-2 focus:ring-offset-1 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed shadow-sm font-medium";
+  "rounded-lg transition-all duration-200 focus:ring-2 focus:ring-offset-1 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed  font-medium";
 
 export const buttonVariantStyles: Record<ButtonProps["variant"], string> = {
   default:
-    "bg-primary-600 text-blackhover:bg-primary-700 focus:ring-primary-500/20",
+    "bg-primary-600 text-blackhover:bg-primary-700 focus:ring-primary-500/20 shadow-sm",
   outlined:
     "bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-400/20",
   transparent:
