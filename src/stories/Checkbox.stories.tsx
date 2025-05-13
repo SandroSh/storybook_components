@@ -40,31 +40,58 @@ export const Basic: Story = {
     );
   },
 };
-
-
 export const Rounded: Story = {
-    args: {
-        size: 'md',
-        variant: 'rounded',
-        checked: true,
-        onChange: () => { },
-    },
+  args: {
+    size: 'md',
+    variant: 'rounded',
+  },
+  render: (args) => {
+    const [checked, setChecked] = useState(true);
+
+    return (
+      <Checkbox
+        {...args}
+        checked={checked}
+        onChange={(e) => setChecked(e.target.checked)}
+      />
+    );
+  },
 };
 
 export const Outlined: Story = {
-    args: {
-        size: 'md',
-        variant: 'outlined',
-        checked: true,
-        onChange: () => { },
-    },
+  args: {
+    size: 'md',
+    variant: 'outlined',
+  },
+  render: (args) => {
+    const [checked, setChecked] = useState(true);
+
+    return (
+      <Checkbox
+        {...args}
+        checked={checked}
+        onChange={(e) => setChecked(e.target.checked)}
+      />
+    );
+  },
 };
 
 export const Filled: Story = {
-    args: {
-        size: 'md',
-        variant: 'filled',
-        checked: true,
-        onChange: () => { },
-    },
+  args: {
+    size: 'md',
+    variant: 'filled',
+  },
+  render: (args) => {
+    const [checked, setChecked] = useState(true);
+
+    return (
+      <Checkbox
+        {...args}
+        checked={checked}
+        onChange={(e) => setChecked(e.target.checked)}
+      />
+    );
+  },
 };
+
+
