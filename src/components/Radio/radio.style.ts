@@ -2,7 +2,7 @@ import { RadioButtonProps } from "./radio.config";
 
 
 export const radioBaseStyles =
-  'appearance-none rounded-full border cursor-pointer transition-all duration-200 relative checked:before:content-[""] checked:before:absolute checked:before:inset-1/4 checked:before:rounded-full checked:before:bg-current checked:before:w-1.5 checked:before:h-1.5';
+  'appearance-none rounded-full border cursor-pointer transition-all duration-200 relative  checked:before:absolute checked:before:inset-1/4 checked:before:rounded-full checked:before:bg-current checked:before:w-full checked:before:h-full checked:before:absolute checked:before:inset-0 checked:before:m-auto';
 
 export const radioSizeStyles: Record<NonNullable<RadioButtonProps['size']>, string> = {
   sm: 'w-4 h-4',
