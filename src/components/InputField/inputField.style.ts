@@ -1,26 +1,26 @@
 import { InputFieldProps } from "./inputField.config";
 
 export const baseStyles =
-  "rounded-lg transition-all duration-200 focus:ring-2 focus:ring-offset-1 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed shadow-sm";
+  "rounded-lg transition-all duration-200 focus:ring-2 focus:ring-offset-1 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed ";
 
 export const variantStyles: Record<
   NonNullable<InputFieldProps["variant"]>,
   string
 > = {
   default:
-    "border border-gray-200 bg-white hover:border-gray-300 focus:border-primary-500 focus:ring-primary-500/20",
+    "border border-gray-200 bg-white hover:border-gray-300 focus:border-primary-500 focus:ring-primary-500/20 shadow-sm",
   outlined:
-    "border-2 border-gray-300 bg-white hover:border-gray-400 focus:border-primary-500 focus:ring-primary-500/20",
+    "border-2 border-gray-300 bg-white hover:border-gray-400 focus:border-primary-500 focus:ring-primary-500/20 shadow-sm",
   filled:
-    "bg-gray-200 text-white hover:bg-primary-600 focus:ring-primary-500/30",
+    "bg-gray-200 text-white hover:bg-primary-600 focus:ring-primary-500/30 shadow-sm",
   underline:
     "border-0 border-b-2 border-gray-300 bg-transparent hover:border-gray-400 focus:border-primary-500 focus:ring-primary-500/20",
 
   ghost:
-    "border border-transparent bg-transparent hover:bg-gray-100 focus:border-primary-500 focus:ring-primary-500/20",
+    "border border-transparent bg-transparent hover:bg-gray-100 focus:border-primary-500 focus:ring-primary-500/20 shadow-sm",
 
   flushed:
-    "border-0 border-b border-gray-300 rounded-none bg-transparent hover:border-gray-400 focus:border-primary-500 focus:ring-primary-500/20",
+    "border-0 border-b border-gray-300 rounded-none bg-transparent hover:border-gray-400 focus:border-primary-500 focus:ring-primary-500/20 shadow-sm",
   unstyled: "border-0 bg-transparent p-0 focus:ring-0 focus:outline-none",
 };
 
